@@ -4,72 +4,288 @@
     box-sizing: border-box;
 }
 
-html {
-    font-family: Arial, Helvetica, sans-serif;
-}
 #main {
 
 }
 
-#header {
-    background-color: #000;
-    height: 46px;
+.clear {
+    clear: both;
 }
 
-#nav , .subnav{
-list-style-type: none;
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav {
+    list-style: none;
+}
+
+#nav > li {
+    display: inline-block;
 }
 
 #nav li {
     position: relative;
 }
-#nav > li {
-    display: inline-block
-}
+
 #nav li a {
     text-decoration: none;
-    padding: 0 24px;
     line-height: 46px;
+    padding: 0 24px;
     display: block;
 }
 
 #nav > li > a {
-    text-transform: uppercase;
     color: #fff;
+    text-transform: uppercase;
 }
-#nav > li:hover > a ,
-#nav .subnav li:hover a
-{
+
+#nav > li:hover > a {
     color: #000;
     background-color: #ccc;
-    
 }
+
 #nav .subnav {
+    display: none;
     position: absolute;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: #fff;
-    display: none;
+}
+
+#nav .subnav a {
+    color: #000;
+    line-height: 38px;
+    padding: 0 12px;
     min-width: 160px;
     top: 100%;
     left: 0;
 }
 
+#nav .subnav li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
 #nav li:hover .subnav {
     display: block;
 }
-#nav .subnav a {
-    padding: 0 12px;
-    line-height: 38px;
-    color: #000;
+
+#header .arrow-icon {
+    font-size: 14px;
+}
+
+#header .icon-btn {
+    float: right;
+}
+
+#header .search-icon {
+    color: #fff;
+    line-height: 46px;
+    padding: 0 21px;
+    font-size: 20px;
+}
+
+#header .search-icon:hover {
+    background-color: red;
+    cursor: pointer;
+    display: block;
 }
 
 #slider {
-    
+    margin-top: 46px;
+    position: relative;
+    background: url('./img/slider/ronaldo.jpeg') top center / cover no-repeat;
+    padding-top: 50%;
+}
+
+#slider .text-slider {
+    position: absolute;
+    bottom: 47px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+
+#slider .text-heading {
+    font-size: 24px;
+}
+
+#slider .text-descritption {
+    font-size: 15px;
+    margin-top: 25px;
 }
 
 #content {
 
 }
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    padding-top: 64px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    margin-top: 25px;
+}
+
+#content .about-text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+    margin-top: 25px;
+}
+
+#content .member-list {
+    margin-top: 48px;
+}
+
+#content .member-item {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+#content .member-name {
+
+}
+
+#content .member-avt {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 100px;
+    border-radius: 4px;
+}
+
+.tour-text {
+    background-color: #000;
+    height: 800px;
+}
+
+.tickets-content {
+    background-color: #fff;
+    margin-top: 38px;
+    
+}
+
+.tickets-list {
+    list-style: none;
+    
+}
+
+.tickets-list li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sold-out {
+    background-color: red;
+    color: #fff;
+    padding: 4px 8px;
+    margin-left: 16px;
+}
+
+.qualyti {
+    float: right;
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: -4px;
+    padding: 4px 8px;
+    margin-right: 10px;
+}
+
+.places-list {
+    margin: 32px -8px 0;
+}
+
+.places-item {
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+.places-img {
+    width: 245px;
+    height: 183px;
+    width: 100%;
+    display: block;
+}
+
+.places-img:hover {
+    opacity: 0.6;
+}
+
+.places-content {
+    background-color: #fff;
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+.places-heading {
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+.places-time {
+    margin-top: 15px;
+    opacity: 0.6;
+}
+
+.places-descritption {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.places-buy-tickets {
+    margin-top: 15px;
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 18px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.places-buy-tickets:hover {
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
 
 #footer {
 
